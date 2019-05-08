@@ -55,7 +55,7 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 			
 		}
 		
-		return null;
+		return listadoProfesor;
 	}
 	
 	private Profesor ParseProfesor(String linea) {

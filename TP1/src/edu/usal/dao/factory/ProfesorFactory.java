@@ -10,6 +10,10 @@ public class ProfesorFactory {
 		if (source.equals("Archivo")) {
 			return new ProfesorDAOimplArchivo();
 		}
+		else if(source.equals("Serializacion")) {
+			
+			return new ProfesorDAOImplSerializacion();
+		}
 		return null;
 	}
 	
