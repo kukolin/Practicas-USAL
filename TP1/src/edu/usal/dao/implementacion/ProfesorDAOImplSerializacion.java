@@ -24,7 +24,7 @@ public class ProfesorDAOImplSerializacion implements ProfesorDAO {
 		
 		FileOutputStream archsalida = new FileOutputStream(new File("profesor.dat"));
 		ObjectOutputStream ouStream = new ObjectOutputStream(archsalida);
-		ouStream.writeObject(profesor);
+		ouStream.writeObject(profesor2);
 		ouStream.close();
 	
 		
@@ -44,7 +44,8 @@ public class ProfesorDAOImplSerializacion implements ProfesorDAO {
 		List<Profesor> listadoprofesor = new ArrayList<Profesor>();
 			
 				try {					
-					listadoprofesor = (List<Profesor>) oiStream.readObject();
+					List<Profesor> readObject = (List<Profesor>) oiStream.readObject();
+					listadoprofesor = readObject;
 
 				}catch(ClassNotFoundException ex) {
 					ex.printStackTrace();

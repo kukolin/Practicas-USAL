@@ -1,5 +1,7 @@
 package edu.usal.negocio.dominio;
 
+
+
 public class Administrativo extends Empleado{
 	
 	public Administrativo() {}
@@ -26,5 +28,5 @@ public class Administrativo extends Empleado{
 	private double sueldo;
 	private Pabellon pabellon;
 	
-	
-}
+		
+	}

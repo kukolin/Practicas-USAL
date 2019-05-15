@@ -1,6 +1,8 @@
 package edu.usal.negocio.dominio;
 
-public abstract class Empleado {
+
+
+public abstract class Empleado  {
 	
 	public Empleado() {}
 	

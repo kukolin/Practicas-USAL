@@ -27,9 +27,7 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 		archivoBufferedWriter.write(str);
 		archivoBufferedWriter.close();
 		archivoWriter.close();
-		
-		
-		
+			
 	}
 	
 	private String SaveProfesor(Profesor profesor){

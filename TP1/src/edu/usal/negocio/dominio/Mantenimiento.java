@@ -1,5 +1,6 @@
 package edu.usal.negocio.dominio;
 
+
 public class Mantenimiento extends Empleado {
 
 	public Mantenimiento() {}
@@ -25,5 +26,7 @@ public class Mantenimiento extends Empleado {
 	private double sueldo;
 	private Pabellon pabellon;
 	
+		
+	}
 	
-}
+	

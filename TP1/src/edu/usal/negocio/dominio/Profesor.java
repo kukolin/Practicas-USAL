@@ -1,8 +1,15 @@
 package edu.usal.negocio.dominio;
-import java.util.*;
 
-public class Profesor extends Empleado {
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+;
+
+public class Profesor extends Empleado implements Serializable {
 	
+	
+
 	public Profesor(){}
 	
 	public Profesor(int id, String nombre, String apellido, String direccion, int dni, double sueldo,
@@ -31,6 +38,5 @@ public class Profesor extends Empleado {
 	public void setCatedras(List<Catedra> catedras) {
 		this.catedras = catedras;
 	}
-	
 
 }
