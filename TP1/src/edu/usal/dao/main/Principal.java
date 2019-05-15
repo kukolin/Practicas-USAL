@@ -27,9 +27,9 @@ public class Principal {
 			profesor1.setNombre("amigo");
 			impDAO.AgregarProfesor(profesor1);
 			
-			List <Profesor> listadoprofesor = impDAO.GetAll();
+			List <Profesor> lista = impDAO.GetAll();
 			
-			for(Profesor profe : listadoprofesor) {
+			for(Profesor profe : lista) {
 				System.out.println(profe.getApellido()+ " "+profe.getNombre());
 			}
 			
