@@ -23,7 +23,7 @@ public class ProfesorDAOImplSerializacion implements ProfesorDAO {
 		}
 		profesor2.add(profesor);
 		
-		FileOutputStream archsalida = new FileOutputStream(new File("profesor.dat"));
+		FileOutputStream archsalida = new FileOutputStream(new File("profesor.txt"));
 		ObjectOutputStream ouStream = new ObjectOutputStream(archsalida);
 		ouStream.writeObject(profesor2);
 		ouStream.close();
@@ -40,7 +40,7 @@ public class ProfesorDAOImplSerializacion implements ProfesorDAO {
 	@Override
 	public List<Profesor> GetAll() throws IOException {
 		
-		FileInputStream fileis = new FileInputStream(new File("profesor.dat"));
+		FileInputStream fileis = new FileInputStream(new File("profesor.txt"));
 		ObjectInputStream oiStream = new ObjectInputStream(fileis);
 		List<Profesor> listadoprofesor = new ArrayList<Profesor>();
 			

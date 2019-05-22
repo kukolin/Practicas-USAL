@@ -18,19 +18,19 @@ public class Principal {
 		profesor1.setDni(123456);
 		profesor1.setDireccion("Santafe");
 		
-		ProfesorDAO impDAO = ProfesorFactory.GetImplementation("Serializacion");
+		ProfesorDAO impDAO = ProfesorFactory.GetImplementation("Archivo");
 		
 		try {
 			
-			impDAO.AgregarProfesor(profesor1);	
+		//	impDAO.AgregarProfesor(profesor1);	
 			profesor1.setApellido("otro");
 			profesor1.setNombre("amigo");
 			impDAO.AgregarProfesor(profesor1);
 			
 			List <Profesor> lista = impDAO.GetAll();
 			
-			for(Profesor profe : lista) {
-				System.out.println(profe.getApellido()+ " "+profe.getNombre());
+			for(Profesor Profesor : lista) {
+				System.out.println(profesor1.getApellido()+ " " +profesor1.getNombre());
 			}
 			
 			

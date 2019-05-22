@@ -18,8 +18,19 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 	@Override
 	public void AgregarProfesor(Profesor profesor) throws IOException {
 		
+		List<Profesor> profesor2 = new ArrayList<Profesor>();
+		try {
+			
+			profesor2 = GetAll();
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			
+		}
+		profesor2.add(profesor);
+		
 		archivo = new File("profesor.txt");
-		archivoWriter = new FileWriter(archivo);
+		archivoWriter = new FileWriter(archivo, true);
 		archivoBufferedWriter = new BufferedWriter(archivoWriter);
 		
 		String str = SaveProfesor(profesor);
@@ -31,7 +42,12 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 	}
 	
 	private String SaveProfesor(Profesor profesor){
-		return profesor.getApellido() + ";" + profesor.getNombre() + "\n";
+		
+		return profesor.getApellido() + ";" + profesor.getNombre() +";"+ profesor.getDni()+
+				";"+profesor.getId()+";"+profesor.getSueldo()+
+				";"+ profesor.getDireccion() +";"+ "\n";
+		
+		
 	}
 	
 	@Override
@@ -39,6 +55,7 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 	
 	@Override
 	public List<Profesor> GetAll() throws IOException{
+		
 		
 		archivo = new File("profesor.txt");
 		archivoReader = new FileReader(archivo);
@@ -53,7 +70,8 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 			
 		}
 		
-		return listadoProfesor;
+			return listadoProfesor;
+
 	}
 	
 	private Profesor ParseProfesor(String linea) {
@@ -61,7 +79,14 @@ public class ProfesorDAOimplArchivo implements ProfesorDAO {
 		
 		Profesor profesor = new Profesor();
 		profesor.setApellido(atributos[0]);
-		profesor.setApellido(atributos[1]);
+		profesor.setNombre(atributos[1]); 
+		int DniP = Integer.parseInt(atributos[2]);
+		profesor.setDni(DniP); 
+		int IdP = Integer.parseInt(atributos[3]);
+		profesor.setId(IdP);
+		double SueldoP = Double.parseDouble(atributos[4]);
+		profesor.setSueldo(SueldoP); 
+		profesor.setDireccion(atributos[5]); 
 		
 		return profesor;
 
