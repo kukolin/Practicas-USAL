@@ -44,7 +44,16 @@ public class VistaProfesor {
 
 		for(Profesor profesor : listado) {
 			
-			System.out.println(profesor.getApellido());
+			System.out.println("Apellido: " + profesor.getApellido()
+			+ " Nombre: "+ profesor.getNombre()
+			+ " ID: "+ profesor.getId()
+			+ " DNI: "+ profesor.getDni()
+			+ " Direccion: "+ profesor.getDireccion()
+			+ " Sueldo: "+ profesor.getSueldo()
+			+ " || \n"	);
+			
+			
+			
 			//Agregar todos los getters...
 			
 		}
