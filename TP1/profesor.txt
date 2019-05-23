@@ -1,1 +1,5 @@
 otro;amigo
+otro;amigo;123456;0;0.0;Santafe;
+otro;amigo;123456;0;0.0;Santafe;
+otro;amigo;123456;0;0.0;Santafe;
+otro;amigo;123456;0;0.0;Santafe;
